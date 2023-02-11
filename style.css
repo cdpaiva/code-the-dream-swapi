@@ -1,0 +1,225 @@
+/* ===================== Global/shared styles ===================== */
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  background-color: #2a2a2a;
+  color: white;
+
+  font-family: 'Exo 2', cursive;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: white;
+  display: inline-block;
+}
+
+a:hover {
+  color: yellow;
+}
+
+a:focus {
+  border: yellow solid 2px; 
+  outline: none;
+}
+
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+}
+
+.footer {
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  background-color: black;
+  text-align: center;
+}
+
+.container {
+  padding-inline: 2rem;
+  flex-grow: 1;
+}
+
+.loading {
+  width: 100%;
+  height: 300px;
+  border-radius: .25rem;
+  background-color: black;
+  display: none;
+  animation: glow 1s infinite ease-in-out;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+.loading.display {
+  display: block;
+}
+
+.height-120 {
+  height: 120px;
+}
+
+/* ======================= Index.html style ======================= */
+
+.title {
+  text-align: center;
+  margin-block: .75rem;
+}
+
+.films-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.film-title {
+  text-align: center;
+  max-width: 150px;
+}
+
+.poster {
+  border: #2a2a2a 2px solid;
+}
+
+.poster:hover {
+  border: yellow solid 2px; 
+  outline: none;
+}
+
+.search-container {
+  width: 60%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-input {
+  flex-grow: 1;
+  height: 1.5rem;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+}
+
+.search-results {
+  margin-block: 1rem;
+  width: 100%;
+  display: flex;
+  gap: .25rem;
+  flex-direction: column;
+}
+
+.search-results-loading {
+  margin-block-start: 1rem;
+  width: 100%;
+  height: 120px;
+  border-radius: .25rem;
+  background-color: black;
+  display: none;
+  animation: glow 1s infinite ease-in-out;
+}
+
+.search-results-loading.display {
+  display: block;
+}
+
+.close-btn {
+  align-self: flex-end;
+  border: none;
+  color: yellow;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+}
+
+/* ===================== Character.html style ===================== */
+
+.avatar {
+  border-radius: 50%;
+  width: 75px;
+}
+
+.character-title-container {
+  margin-block-start: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.character-films {
+  margin-bottom: 1rem;
+}
+
+.films-loading {
+  height: 120px;
+}
+
+/* ========================= Film.html style ====================== */
+  
+.text-crawl {
+  transform: perspective(300px) rotateX(25deg);
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 350%;
+  height: 4em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+  
+.text-crawl-bg {
+  background-image: url("images/stars-bg.jpg");
+  padding-inline: 3rem;
+  padding-bottom: 1rem;
+}
+
+.text-crawl-content {
+  animation: move-up 25s linear 2s;
+  position: absolute;
+  top: 100%;
+  color: yellow;
+}
+
+@keyframes move-up {
+  0% {
+      top: 100%;
+  }
+  100% {
+      top: -750%;
+  }
+}
+
+.characters {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.characters-loading {
+  grid-column: 1/5;
+}

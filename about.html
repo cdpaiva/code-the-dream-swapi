@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWApi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">Home Page</a>
+      <img src="./images/logo.svg" alt="Star wars logo" width="150px"/>
+      <a href="/about.html">About me and this project</a>
+    </nav>
+
+    <div class="container">
+      <p>
+        My name is Carlos Paiva, I'm an aspiring developer. I am from Brazil and I currently live in Durham, NC .
+        At the moment, I do an internship in front-end development in a brazilian company, and my goal is to be a full stack developer.
+      </p>
+      <p>
+        I hope you enjoy this project as much as I appreciated doing it!! Some of the features I implemented in this webpage:
+      </p>
+      <ul>
+        <li>
+          Requests for characters and films, with loading animations.
+        </li>
+        <li>
+          Present all 6 movies in the home page.
+        </li>
+        <li>
+          Search a character by name.
+        </li>
+        <li>
+          Display images for some of the characters.
+        </li>
+        <li>
+          Text animation for each opening, that then transforms into plain text on animation end.
+        </li>
+        <li>
+          Error page for invalid requests.
+        </li>
+      </ul>
+       
+      <h4>About the characters images</h4>
+      <p>
+        I also wanted to display images of the characters, although the API didn't provide that.
+        To do so, I found a page that had images of several star wars characters and used ChapGPT to get a script that scraped the page and saved all images.
+        I knew that I could do that with a python library called beautifulsoup, but I didn't quite know how, so I had ChatGPT to generate the code for me.
+        The code is in the file scrape.py. 
+      </p>
+      <p>
+        Then, I used the API to count in how many films each character appeared.
+        If the characters appeared in 3 movies or more, I gave them their images.
+        The other ones don't have the images, since my goal was more to figure out how to do it than to add for all the 82 characters provided by the API.
+      </p>
+      <p>
+        Posters for each movie were downloaded from <a href="https://www.allposters.com">https://www.allposters.com</a>
+      </p>
+    </div>
+
+    <footer class="footer">
+      <p>Consuming data from SWAPI</p>
+      <p>Created for the Code the Dream application</p>
+    </footer>
+
+  </body>
+</html>

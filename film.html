@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWApi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">Home Page</a>
+      <img src="./images/logo.svg" alt="Star wars logo" width="150px"/>
+      <a href="/about.html">About me and this project</a>
+    </nav>
+
+    <div class="container">
+      <h1 id="filmTitle"></h1>
+      <div id="loading" class="loading"></div>
+      <div id="text-crawl-bg" >
+        <div id="text-crawl-container">
+          <div id="text-crawl">
+          </div>
+        </div>
+      </div>
+      <div id="container"></div>
+      <h3>Characters in this film</h3>
+      <div id="characters" class="characters">
+        <div id="characters-loading" class="loading characters-loading height-120"></div>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <p>Consuming data from SWAPI</p>
+      <p>Created for the Code the Dream application</p>
+    </footer>
+
+    <script type="module" src="./scripts/film.js"></script>
+  </body>
+</html>
