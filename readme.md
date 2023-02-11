@@ -4,9 +4,19 @@ Project in HTML/CSS/Vanilla JS that fetches data from [SWApi](https://swapi.dev/
 
 More about the website can be found in the [about page](./about.html).
 
-## How to run the code
+## How to run the code 🖥️
 
-This project uses vite as the build tool. To run a local development server, run the command:
+Clone the repository or download the code.
+
+Install the necessary packages with:
+
+```
+npm install
+```
+
+These dependencies are used by vite, the build tool used here.
+
+To run a local development server, run the command:
 
 ```
 npm run dev
